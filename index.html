@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>알츠하이머 바이오마커의 시간적 역동성과 생물학적 다양성 | 논문 세미나</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- KaTeX CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Custom JS -->
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar"></div>
+
+  <!-- ============================================================
+       HERO SECTION
+       ============================================================ -->
+  <section id="hero" class="hero">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span> JAMA Neurology &middot; April 2025 &middot; Original Investigation
+      </div>
+      <h1>
+        알츠하이머 바이오마커의<br>
+        <span class="gradient-text-blue">시간적 역동성</span>과<br>
+        <span class="gradient-text-pink">생물학적 다양성</span>
+      </h1>
+      <p class="hero-subtitle">
+        혈장 바이오마커와 PET 영상의 불일치(Discordance)는 왜 발생하는가?
+      </p>
+      <div class="hero-meta">
+        <span>&#128196; Yun J et al.</span>
+        <span>&#128101; 2,611명</span>
+        <span>&#127973; K-ROAD &middot; TRIAD &middot; ADNI</span>
+      </div>
+      <div class="scroll-hint">아래로 스크롤 &darr;</div>
+    </div>
+  </section>
+
+  <!-- Page wrapper for max-width centering -->
+  <div class="page">
+
+  <!-- ============================================================
+       TABLE OF CONTENTS
+       ============================================================ -->
+  <section id="toc" class="toc">
+    <div class="toc-header">목차</div>
+    <div class="toc-list">
+      <a href="#sec01"><span class="toc-num">01</span> 핵심 요약</a>
+      <a href="#sec02"><span class="toc-num">02</span> 연구 배경</a>
+      <a href="#sec03"><span class="toc-num">03</span> 연구 목적</a>
+      <a href="#sec04"><span class="toc-num">04</span> 연구 대상</a>
+      <a href="#sec05"><span class="toc-num">05</span> 바이오마커 측정</a>
+      <a href="#sec06"><span class="toc-num">06</span> 일치율 비교</a>
+      <a href="#sec07"><span class="toc-num">07</span> A&beta; PET 불일치</a>
+      <a href="#sec08"><span class="toc-num">08</span> 불일치 기전</a>
+      <a href="#sec09"><span class="toc-num">09</span> 인지 변화 궤적</a>
+      <a href="#sec10"><span class="toc-num">10</span> 동반질환 역할</a>
+      <a href="#sec11"><span class="toc-num">11</span> Tau PET 불일치</a>
+      <a href="#sec12"><span class="toc-num">12</span> 시간적 역동성</a>
+      <a href="#sec13"><span class="toc-num">13</span> 임상적 함의</a>
+      <a href="#sec14"><span class="toc-num">14</span> 강점과 한계</a>
+      <a href="#sec15"><span class="toc-num">15</span> 정리 &amp; 토론</a>
+      <a href="#sec16"><span class="toc-num">16</span> 참고문헌</a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 01: 핵심 요약
+       ============================================================ -->
+  <section id="sec01" class="section">
+    <div class="reveal">
+      <div class="section-number">01</div>
+      <span class="section-tag tag-core">핵심 요약</span>
+      <h2 class="section-title">이 논문을 한 문장으로</h2>
+
+      <div class="callout callout-blue">
+        알츠하이머 혈장 바이오마커(p-tau217)와 PET 영상 간 불일치는 단순한 검사 오류가 아니라, <strong>시간적 역동성</strong>과 <strong>생물학적 다양성</strong>이 반영된 다면적(multifaceted) 현상이다.
+      </div>
+
+      <div class="callout callout-gray">
+        혈장 양성인데 PET 음성이면? 혈장 음성인데 PET 양성이면? 이 불일치는 무엇을 의미하는가?
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 02: 배경
+       ============================================================ -->
+  <section id="sec02" class="section">
+    <div class="reveal">
+      <div class="section-number">02</div>
+      <span class="section-tag tag-background">배경</span>
+      <h2 class="section-title">왜 이 연구가 중요한가?</h2>
+
+      <p>
+        알츠하이머병(AD)의 진단 패러다임은 근본적인 전환기를 맞이하고 있다. 과거 임상 증상 기반의 진단에서 벗어나, 현재는 생물학적 바이오마커를 통한 <strong>생체 내(in vivo) 병리 확인</strong>이 표준이 되어가고 있다. 특히 혈장(plasma) 바이오마커의 등장은 PET 영상이나 뇌척수액(CSF) 검사의 높은 비용과 제한된 접근성을 극복할 수 있는 대안으로 주목받고 있다. 그러나 혈장 바이오마커와 PET 영상이 항상 일치하지는 않으며, 이 불일치의 임상적 의미와 원인은 충분히 규명되지 않았다.
+      </p>
+
+      <ul class="clean-list accent-blue">
+        <li><strong>혈장 바이오마커 급부상</strong>: p-tau217을 필두로 한 혈장 바이오마커는 높은 정확도와 비용 효율성으로 임상 도입이 가속화되고 있다. 2024년 이후 다수의 가이드라인이 혈장 검사를 권고하기 시작했다.</li>
+        <li><strong>PET과의 불일치 빈번</strong>: 혈장 바이오마커 결과와 PET 영상 결과가 일치하지 않는 사례(discordance)가 임상 현장에서 빈번히 관찰된다. 이는 진단적 혼란과 치료 결정의 불확실성을 야기한다.</li>
+        <li><strong>불일치 원인 불명확</strong>: 이 불일치가 단순한 검사 오류인지, 아니면 질병 과정의 시간적 차이나 환자의 생물학적 특성을 반영하는 것인지에 대한 체계적인 연구가 부족한 상황이다.</li>
+      </ul>
+
+      <div class="data-table">
+        <table>
+          <thead>
+            <tr>
+              <th>특성</th>
+              <th>혈장 바이오마커</th>
+              <th>PET 영상</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>비용</td>
+              <td>저렴 (~$50&ndash;200)</td>
+              <td>고비용 (~$3,000&ndash;5,000)</td>
+            </tr>
+            <tr>
+              <td>접근성</td>
+              <td>높음 (혈액 채취)</td>
+              <td>제한적 (PET 센터 필요)</td>
+            </tr>
+            <tr>
+              <td>침습성</td>
+              <td>최소 침습</td>
+              <td>방사성 추적자 주입</td>
+            </tr>
+            <tr>
+              <td>반영 시점</td>
+              <td>동적/연속적 변화</td>
+              <td>시점 단면(snapshot)</td>
+            </tr>
+            <tr>
+              <td>측정 대상</td>
+              <td>가용성(soluble) 형태</td>
+              <td>불용성(insoluble) 침착</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 03: 연구 목적
+       ============================================================ -->
+  <section id="sec03" class="section">
+    <div class="reveal">
+      <div class="section-number">03</div>
+      <span class="section-tag tag-core">연구 목적</span>
+      <h2 class="section-title">세 가지 핵심 질문</h2>
+
+      <div class="card-grid card-grid-3">
+        <div class="card card-blue">
+          <div class="card-number">Q1</div>
+          <h3>동반질환의 영향</h3>
+          <p>의학적 동반질환이 혈장 바이오마커 농도에 영향을 미치는가? 고혈압, 당뇨, 만성 신장질환(CKD), BMI 등 신체 조성과 동반질환이 혈장 수치를 변화시킬 수 있는지 규명한다.</p>
+        </div>
+        <div class="card card-purple">
+          <div class="card-number">Q2</div>
+          <h3>불일치 그룹의 특성</h3>
+          <p>불일치 그룹의 영상 및 임상적 특성은 무엇인가? 혈장과 PET가 일치하지 않는 환자들의 뇌 영상 패턴, 인구학적 특성, 동반질환 프로필을 체계적으로 분석한다.</p>
+        </div>
+        <div class="card card-pink">
+          <div class="card-number">Q3</div>
+          <h3>인지 변화 궤적</h3>
+          <p>불일치 그룹의 인지 변화 궤적은 어떠한가? 혈장과 PET의 불일치가 향후 인지 기능 변화를 예측하는지, 어떤 그룹이 더 빠른 인지 저하를 보이는지 종단적으로 추적한다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 04: 방법 - 코호트
+       ============================================================ -->
+  <section id="sec04" class="section">
+    <div class="reveal">
+      <div class="section-number">04</div>
+      <span class="section-tag tag-method">방법</span>
+      <h2 class="section-title">3개 코호트, 2,611명</h2>
+
+      <div class="card-grid card-grid-3">
+        <div class="card card-blue">
+          <div class="card-number">1</div>
+          <h3>K-ROAD <small>(Korea)</small></h3>
+          <p><strong>n = 2,611</strong> (tau PET: 124명)</p>
+          <p>한국인 코호트. 평균 연령 71.2세, 여성 63.4%. Simoa 기반 p-tau217 측정. <sup>18</sup>F-florbetaben 또는 <sup>18</sup>F-flutemetamol A&beta; PET 시행.</p>
+        </div>
+        <div class="card card-purple">
+          <div class="card-number">2</div>
+          <h3>TRIAD <small>(Canada)</small></h3>
+          <p><strong>n = 274</strong></p>
+          <p>캐나다 McGill 대학 코호트. Quanterix 플랫폼 사용. <sup>18</sup>F-AZD4694 A&beta; PET, <sup>18</sup>F-MK6240 tau PET 시행.</p>
+        </div>
+        <div class="card card-pink">
+          <div class="card-number">3</div>
+          <h3>ADNI <small>(USA)</small></h3>
+          <p><strong>n = 378</strong></p>
+          <p>미국 중심 다국적 코호트. Quanterix 플랫폼 사용. <sup>18</sup>F-florbetapir A&beta; PET, <sup>18</sup>F-flortaucipir tau PET 시행.</p>
+        </div>
+      </div>
+
+      <div class="callout callout-gray">
+        <strong>포함 기준</strong>: 인지기능 정상(CU), 경도인지장애(MCI), 알츠하이머형 치매(AD dementia). 모든 참여자에서 A&beta; PET + 혈장 바이오마커를 시행하였다.
+      </div>
+
+      <figure class="figure reveal">
+        <img src="img/study_design.svg" alt="연구 디자인 흐름도: 3개 코호트에서 혈장 바이오마커와 PET 영상을 통한 4그룹 분류" class="lightbox-trigger">
+        <figcaption>연구 디자인 흐름도. 3개 코호트(K-ROAD, TRIAD, ADNI)에서 혈장 바이오마커 측정과 PET 영상을 통해 4개 그룹으로 분류하는 과정.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 05: 바이오마커 측정
+       ============================================================ -->
+  <section id="sec05" class="section">
+    <div class="reveal">
+      <div class="section-number">05</div>
+      <span class="section-tag tag-method">방법</span>
+      <h2 class="section-title">바이오마커 측정 및 그룹 분류</h2>
+
+      <h3>혈장 바이오마커</h3>
+      <ul class="clean-list accent-blue">
+        <li><strong>p-tau217</strong>: 타우 단백질의 217번 트레오닌 인산화 형태. A&beta; 및 tau 병리 모두와 높은 상관관계를 보이며, 현재 가장 유망한 혈장 바이오마커로 평가된다. 양성 기준: 0.46 pg/mL (A&beta;), 0.91 pg/mL (tau).</li>
+        <li><strong>p-tau181</strong>: 181번 트레오닌 인산화 타우. 최초로 광범위하게 연구된 혈장 타우 바이오마커로, A&beta; 병리와 중등도의 상관관계를 보인다.</li>
+        <li><strong>p-tau231</strong>: 231번 트레오닌 인산화 타우. A&beta; 축적의 초기 단계를 반영하는 것으로 알려져 있으며, 초기 AD 탐지에 유용할 수 있다.</li>
+        <li><strong>A&beta;42/40 ratio</strong>: 혈장 내 A&beta;42와 A&beta;40의 비율. 뇌 내 A&beta; 축적 시 A&beta;42가 감소하여 비율이 낮아지는 원리를 이용한다.</li>
+      </ul>
+
+      <h3>PET 영상</h3>
+      <ul class="clean-list accent-purple">
+        <li><strong>A&beta; PET</strong>: rdcCL(regional-density-corrected Centiloid) 단위 사용. 양성 기준 rdcCL 25.5. 뇌 피질에 침착된 불용성 아밀로이드 플라크를 정량화한다.</li>
+        <li><strong>Tau PET</strong>: meta-ROI SUVR(Standardized Uptake Value Ratio) 사용. 양성 기준 SUVR 1.38. 내측 측두엽을 중심으로 한 타우 신경섬유매듭(neurofibrillary tangle) 침착을 측정한다.</li>
+      </ul>
+
+      <div class="step-flow">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-text">혈장 채취</div>
+        </div>
+        <div class="step-arrow">&rarr;</div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-text">양성/음성 판정</div>
+        </div>
+        <div class="step-arrow">&rarr;</div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-text">PET 스캔</div>
+        </div>
+        <div class="step-arrow">&rarr;</div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-text">4그룹 분류</div>
+        </div>
+      </div>
+
+      <div class="vs-box">
+        <div class="vs-left vs-green">
+          <h4>Concordant (일치)</h4>
+          <p><strong>Plasma&minus;/PET&minus;</strong><br>일치 음성</p>
+          <p><strong>Plasma+/PET+</strong><br>일치 양성</p>
+        </div>
+        <div class="vs-divider">vs</div>
+        <div class="vs-right vs-pink">
+          <h4>Discordant (불일치)</h4>
+          <p><strong>Plasma+/PET&minus;</strong><br>혈장만 양성</p>
+          <p><strong>Plasma&minus;/PET+</strong><br>PET만 양성</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 06: 일치율 비교
+       ============================================================ -->
+  <section id="sec06" class="section">
+    <div class="reveal">
+      <div class="section-number">06</div>
+      <span class="section-tag tag-result">결과</span>
+      <h2 class="section-title">p-tau217이 가장 높은 일치율을 보이다</h2>
+
+      <p>
+        네 가지 혈장 바이오마커 중 <strong>p-tau217</strong>이 A&beta; PET와의 일치율 <strong>90.5%</strong>(2,326/2,571)로 가장 높은 수치를 기록하였다. 이는 p-tau181(77.4%), p-tau231(77.3%), A&beta;42/40(77.1%)보다 약 13%p 이상 높은 결과이다. Tau PET와의 일치율에서도 p-tau217이 83.3%(100/120)로 최고 성능을 보였다.
+      </p>
+
+      <div class="data-table">
+        <table>
+          <thead>
+            <tr>
+              <th>혈장 바이오마커</th>
+              <th>A&beta; PET 일치율</th>
+              <th>Tau PET 일치율</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highlight-row">
+              <td><strong>p-tau217</strong></td>
+              <td><strong>90.5%</strong> (2326/2571)</td>
+              <td><strong>83.3%</strong> (100/120)</td>
+            </tr>
+            <tr>
+              <td>p-tau181</td>
+              <td>77.4% (1980/2559)</td>
+              <td>77.5% (93/120)</td>
+            </tr>
+            <tr>
+              <td>p-tau231</td>
+              <td>77.3% (1973/2551)</td>
+              <td>&mdash;</td>
+            </tr>
+            <tr>
+              <td>A&beta;42/40 ratio</td>
+              <td>77.1% (1127/1462)</td>
+              <td>&mdash;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-green">
+        p-tau217은 A&beta; 및 tau 병리 모두에서 최고 일치율을 달성 &rarr; <strong>혈장 선별 검사의 최적 후보</strong>로 확인되었다.
+      </div>
+
+      <figure class="figure reveal">
+        <img src="img/concordance_chart.svg" alt="바이오마커별 일치율 비교 차트" class="lightbox-trigger">
+        <figcaption>바이오마커별 일치율 비교. p-tau217이 A&beta; PET(90.5%)과 Tau PET(83.3%) 모두에서 최고 일치율을 달성하였다.</figcaption>
+      </figure>
+
+      <figure class="figure reveal">
+        <img src="img/figure1.jpg" alt="Figure 1: 혈장 바이오마커와 PET 영상 간 일치율 비교" class="lightbox-trigger">
+        <figcaption>Figure 1. 혈장 바이오마커 농도와 A&beta; PET rdcCL의 산점도. p-tau217(좌상)이 가장 명확한 이분화(bimodal) 패턴을 보이며, 점선은 각 바이오마커의 양성 cutoff를 나타낸다.</figcaption>
+      </figure>
+
+      <div class="callout callout-key">
+        이후 모든 분석은 <strong>p-tau217 기반</strong>으로 진행한다.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 07: Aβ PET 불일치 그룹 특성
+       ============================================================ -->
+  <section id="sec07" class="section">
+    <div class="reveal">
+      <div class="section-number">07</div>
+      <span class="section-tag tag-result">결과</span>
+      <h2 class="section-title">A&beta; PET 불일치 그룹의 특성</h2>
+      <p class="section-subtitle">p-tau217 양성이지만 A&beta; PET 음성인 그룹은 누구인가?</p>
+
+      <div class="two-col">
+        <div class="col">
+          <h3>p-tau217+ / A&beta; PET&minus; <small>(n=152)</small></h3>
+          <div class="callout callout-pink">
+            더 고령: <strong>75.8세</strong> vs 70.0세 (P&lt;.001)
+          </div>
+          <ul class="clean-list accent-pink">
+            <li>고혈압: <strong>36.8%</strong> vs 25.0% (P=.003)</li>
+            <li>당뇨: <strong>26.3%</strong> vs 14.7% (P&lt;.001)</li>
+            <li>만성 신장질환(CKD): <strong>11.2%</strong> vs 2.0% (P&lt;.001)</li>
+            <li>낮은 해마 부피: <strong>2,555 mm&sup3;</strong> vs 2,979 mm&sup3; (P&lt;.001)</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3>p-tau217&minus; / A&beta; PET+ <small>(n=93)</small></h3>
+          <div class="callout callout-orange">
+            더 높은 BMI: <strong>24.1</strong> vs 23.1 (P=.001)
+          </div>
+          <ul class="clean-list accent-orange">
+            <li>낮은 A&beta; PET 양성률: <strong>16.7%</strong> (경계 양성, rdcCL 중앙값 낮음)</li>
+            <li>상대적으로 젊은 연령대 경향</li>
+            <li>동반질환 빈도는 일치 음성군과 유사</li>
+            <li>A&beta; PET CL 값이 양성 기준 근처에 집중 (borderline positivity)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout callout-key">
+        동반질환과 신체 조성이 혈장 수치에 영향 &rarr; 단순 &lsquo;위양성&rsquo;이 아닌, <strong>생물학적 맥락</strong>을 반영하는 불일치이다.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 08: 불일치 기전
+       ============================================================ -->
+  <section id="sec08" class="section">
+    <div class="reveal">
+      <div class="section-number">08</div>
+      <span class="section-tag tag-core">해석</span>
+      <h2 class="section-title">불일치의 다면적 기전</h2>
+
+      <div class="card-grid card-grid-2">
+        <div class="card card-pink">
+          <h3>Plasma+ / PET&minus;</h3>
+          <ul class="clean-list">
+            <li><strong>시간적 선행(Temporal Precedence)</strong>: 혈장 바이오마커가 PET보다 먼저 양성화된다. 가용성(soluble) 형태의 p-tau가 불용성 플라크 침착보다 선행하기 때문이다.</li>
+            <li><strong>동반질환 효과</strong>: CKD는 p-tau의 신장 청소율(renal clearance)을 감소시켜 혈장 농도를 인위적으로 높인다.</li>
+            <li><strong>혈관 위험인자</strong>: 고령 + 고혈압/당뇨는 혈뇌장벽(BBB) 투과성 증가를 유발하여 혈장 p-tau 수치를 상승시킬 수 있다.</li>
+          </ul>
+        </div>
+        <div class="card card-orange">
+          <h3>Plasma&minus; / PET+</h3>
+          <ul class="clean-list">
+            <li><strong>BMI 효과(Dilution Effect)</strong>: 체질량 증가에 따른 혈액량(blood volume) 증가가 바이오마커를 희석(dilute)시켜 농도가 낮아진다.</li>
+            <li><strong>초기 AD / 우연적 양성</strong>: A&beta; PET가 양성 기준 부근(borderline)인 경우, 아직 충분한 병리적 의미를 갖지 않을 수 있다 (incidental A&beta; positivity).</li>
+            <li><strong>후기 안정화(Plateau)</strong>: 질병 후기에 혈장 바이오마커 수치가 더 이상 상승하지 않고 안정화(plateau)되는 현상이 관찰된다.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout callout-purple">
+        혈장과 PET는 <strong>동일한 병리</strong>를 서로 다른 <strong>시간 창(temporal window)</strong>에서 반영한다. 불일치는 오류가 아니라 병리 진행의 스냅샷 차이이다.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 09: 인지 변화 궤적
+       ============================================================ -->
+  <section id="sec09" class="section">
+    <div class="reveal">
+      <div class="section-number">09</div>
+      <span class="section-tag tag-result">결과</span>
+      <h2 class="section-title">불일치 그룹의 인지 변화: 서로 다른 궤적</h2>
+
+      <div class="prop-grid">
+        <div class="prop-item prop-ref">
+          <div class="prop-label">Plasma&minus; / PET&minus;</div>
+          <div class="prop-value">기준 (Reference)</div>
+          <div class="prop-detail">가장 안정적인 인지 궤적</div>
+        </div>
+        <div class="prop-item prop-warn">
+          <div class="prop-label">Plasma+ / PET&minus;</div>
+          <div class="prop-value">MMSE &beta;=&minus;0.53*** <br> CDR-SB &beta;=0.37***</div>
+          <div class="prop-detail">유의미한 인지 저하 (P&lt;.001)</div>
+        </div>
+        <div class="prop-item prop-neutral">
+          <div class="prop-label">Plasma&minus; / PET+</div>
+          <div class="prop-value">유의미한 차이 없음</div>
+          <div class="prop-detail">기준군과 유사한 궤적</div>
+        </div>
+        <div class="prop-item prop-danger">
+          <div class="prop-label">Plasma+ / PET+</div>
+          <div class="prop-value">MMSE &beta;=&minus;1.01*** <br> CDR-SB &beta;=0.64***</div>
+          <div class="prop-detail">가장 빠른 인지 저하</div>
+        </div>
+      </div>
+
+      <div class="callout callout-key">
+        &#9888;&#65039; <strong>p-tau217+/A&beta; PET&minus; 그룹</strong>도 유의미한 인지 저하를 보인다 &rarr; PET 음성이라고 해서 안심할 수 없다.
+      </div>
+
+      <figure class="figure reveal">
+        <img src="img/figure1.jpg" alt="Figure: 4개 그룹별 인지 변화 궤적" class="lightbox-trigger">
+        <figcaption>Figure. 4개 불일치 그룹별 MMSE 및 CDR-SB 종단적 변화 궤적. 평균 추적 기간: MMSE 3.63년, CDR-SB 3.10년. Plasma+/PET+ 그룹이 가장 가파른 인지 저하를 보이며, Plasma+/PET&minus; 그룹도 기준군 대비 유의미한 저하를 나타낸다.</figcaption>
+      </figure>
+
+      <p>인지 변화 궤적은 선형 혼합 효과 모델(linear mixed-effects model)로 분석하였다:</p>
+
+      <div class="math-block">
+        $$y_{ij} = \beta_0 + \beta_1 \cdot \text{group} + \beta_2 \cdot \text{time} + \beta_3 \cdot (\text{group} \times \text{time}) + \epsilon_{ij}$$
+      </div>
+
+      <p>여기서 $y_{ij}$는 $i$번째 참여자의 $j$번째 시점에서의 인지 점수이며, $\beta_3$ (group &times; time 상호작용항)이 핵심 관심 계수이다. 연령, 성별, 교육 수준, APOE &epsilon;4 유전자형을 공변량으로 보정하였다.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 10: 동반질환 역할
+       ============================================================ -->
+  <section id="sec10" class="section">
+    <div class="reveal">
+      <div class="section-number">10</div>
+      <span class="section-tag tag-result">결과</span>
+      <h2 class="section-title">동반질환과 신체 조성의 역할</h2>
+
+      <div class="data-table">
+        <table>
+          <thead>
+            <tr>
+              <th>특성</th>
+              <th>P&minus;/PET&minus; (n=1073)</th>
+              <th>P+/PET&minus; (n=152)</th>
+              <th>P&minus;/PET+ (n=93)</th>
+              <th>P+/PET+ (n=1253)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>연령</td>
+              <td>70.0 (8.8)</td>
+              <td><strong>75.8 (7.2)</strong></td>
+              <td>71.5 (7.0)</td>
+              <td>71.7 (8.6)</td>
+            </tr>
+            <tr>
+              <td>고혈압 (%)</td>
+              <td>25.0</td>
+              <td><strong>36.8</strong></td>
+              <td>28.6</td>
+              <td>26.3</td>
+            </tr>
+            <tr>
+              <td>당뇨 (%)</td>
+              <td>14.7</td>
+              <td><strong>26.3</strong></td>
+              <td>9.9</td>
+              <td>9.0</td>
+            </tr>
+            <tr>
+              <td>CKD (%)</td>
+              <td>2.0</td>
+              <td><strong>11.2</strong></td>
+              <td>3.2</td>
+              <td>2.5</td>
+            </tr>
+            <tr>
+              <td>BMI</td>
+              <td>23.1</td>
+              <td>23.8</td>
+              <td><strong>24.1</strong></td>
+              <td>23.5</td>
+            </tr>
+            <tr>
+              <td>해마 부피 (mm&sup3;)</td>
+              <td>2979.1</td>
+              <td><strong>2555.4</strong></td>
+              <td>2824.4</td>
+              <td><strong>2422.2</strong></td>
+            </tr>
+            <tr>
+              <td>MMSE</td>
+              <td>24.6</td>
+              <td>22.4</td>
+              <td>26.1</td>
+              <td><strong>24.6</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-orange">
+        <strong>CKD 효과</strong>: 만성 신장질환은 p-tau의 신장 청소율(renal clearance)을 감소시켜 혈장 농도를 인위적으로 높일 수 있다. P+/PET&minus; 그룹에서 CKD 비율이 11.2%로 다른 그룹(2.0&ndash;3.2%)보다 현저히 높다.
+      </div>
+
+      <div class="callout callout-green">
+        <strong>BMI/희석 효과</strong>: BMI 증가는 혈액량(plasma volume) 증가를 동반하며, 이로 인해 바이오마커 농도가 희석(dilution effect)될 수 있다. P&minus;/PET+ 그룹의 BMI가 24.1로 가장 높은 점이 이를 뒷받침한다.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 11: Tau PET 불일치
+       ============================================================ -->
+  <section id="sec11" class="section">
+    <div class="reveal">
+      <div class="section-number">11</div>
+      <span class="section-tag tag-result">결과</span>
+      <h2 class="section-title">Tau PET 불일치: 다른 양상</h2>
+
+      <p>
+        124명의 tau PET 시행 하위군에서 분석한 결과, tau PET 기반 불일치는 A&beta; PET 불일치와는 본질적으로 다른 양상을 보였다. A&beta; PET에서는 동반질환이 불일치와 유의미하게 연관되었지만, tau PET에서는 불일치 그룹 간 동반질환 차이가 유의미하지 않았다. 인지 변화 궤적에서도 오직 <strong>일치 양성(p-tau217+/tau PET+)</strong> 그룹만이 유의미한 인지 저하 가속을 보였다.
+      </p>
+
+      <div class="vs-box">
+        <div class="vs-left vs-green">
+          <h4>A&beta; PET 불일치</h4>
+          <p>동반질환 유의미한 차이 <strong>있음</strong></p>
+          <p>인지 궤적 차이 <strong>있음</strong></p>
+          <p>P+/PET&minus;도 인지 저하 가속</p>
+        </div>
+        <div class="vs-divider">vs</div>
+        <div class="vs-right vs-pink">
+          <h4>Tau PET 불일치</h4>
+          <p>동반질환 차이 <strong>없음</strong></p>
+          <p>P+/tau PET+만 인지 저하 가속</p>
+          <p>불일치 그룹은 기준군과 유사</p>
+        </div>
+      </div>
+
+      <div class="callout callout-blue">
+        Tau PET에서는 <strong>일치 양성(p-tau217+/tau PET+)</strong>만 유의미한 인지 저하를 보였다 (&beta;=&minus;1.66, P&lt;.001). 불일치 그룹은 기준군과 통계적으로 유의미한 차이를 보이지 않았다.
+      </div>
+
+      <figure class="figure reveal">
+        <img src="img/figure2.jpg" alt="Figure 2: Tau PET 불일치 그룹 분석" class="lightbox-trigger">
+        <figcaption>Figure 2. Tau PET 기반 4개 그룹의 인지 변화 궤적 및 동반질환 비교. A&beta; PET 불일치와 달리, tau PET 불일치에서는 동반질환 차이가 관찰되지 않았다.</figcaption>
+      </figure>
+
+      <div class="callout callout-key">
+        불일치 메커니즘은 바이오마커 유형에 따라 <strong>이질적(heterogeneous)</strong>이다. A&beta;와 tau의 불일치는 서로 다른 생물학적 기반을 가진다.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 12: 시간적 역동성
+       ============================================================ -->
+  <section id="sec12" class="section">
+    <div class="reveal">
+      <div class="section-number">12</div>
+      <span class="section-tag tag-core">핵심 개념</span>
+      <h2 class="section-title">시간적 역동성: 불일치를 이해하는 열쇠</h2>
+      <p class="section-subtitle">혈장과 PET는 같은 병리를 서로 다른 시간 축에서 본다</p>
+
+      <div class="step-flow step-flow-vertical">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-text">뇌 내 A&beta; 축적 시작</div>
+        </div>
+        <div class="step-arrow">&darr;</div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-text">혈장 p-tau 상승 (soluble form)</div>
+        </div>
+        <div class="step-arrow">&darr;</div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-text">혈장 양성 판정</div>
+        </div>
+        <div class="step-arrow">&darr;</div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-text">A&beta; PET 양성화 (insoluble plaque)</div>
+        </div>
+        <div class="step-arrow">&darr;</div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-text">Tau PET 양성화 &rarr; 인지 저하</div>
+        </div>
+      </div>
+
+      <div class="callout callout-purple">
+        <strong>Plasma+/PET&minus; 불일치</strong> = 위 시간 순서의 <strong>초기 단계를 포착</strong>한 것이다. 즉, 혈장이 먼저 양성화되고 PET는 아직 음성인 과도기적 상태로서, <strong>&lsquo;미래의 PET 양성&rsquo;</strong>을 예측하는 신호일 수 있다.
+      </div>
+
+      <div class="callout callout-key">
+        <strong>임상적 함의</strong>: p-tau217 양성은 현재 PET 상태와 무관하게 <strong>미래 인지 저하의 독립적 예측 인자</strong>이다. 혈장 양성 결과를 PET 음성이라는 이유로 무시해서는 안 된다.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 13: 임상적 함의
+       ============================================================ -->
+  <section id="sec13" class="section">
+    <div class="reveal">
+      <div class="section-number">13</div>
+      <span class="section-tag tag-application">적용</span>
+      <h2 class="section-title">임상 현장에서의 함의</h2>
+
+      <div class="card-grid card-grid-3">
+        <div class="card card-blue">
+          <h3>선별 검사</h3>
+          <p>p-tau217의 높은 일치율(90.5%)은 1차 선별 도구로서의 타당성을 강력히 뒷받침한다. <strong>비용 효율적 전략</strong>으로서 혈액 검사를 우선 시행하고, 필요한 경우에만 PET를 추가하는 2단계 접근법이 유효하다.</p>
+        </div>
+        <div class="card card-purple">
+          <h3>결과 해석</h3>
+          <p>혈장과 PET 결과가 불일치할 경우, <strong>동반질환 확인이 필수</strong>이다. CKD, BMI, 혈관 위험인자(고혈압, 당뇨) 등이 혈장 수치에 영향을 미칠 수 있으므로, 이를 고려한 종합적 해석이 필요하다.</p>
+        </div>
+        <div class="card card-green">
+          <h3>예후 판단</h3>
+          <p>Plasma+/PET&minus; 그룹도 유의미한 인지 저하를 보이므로, PET 음성이라는 이유만으로 안심해서는 안 된다. <strong>추적 관찰</strong>을 통한 모니터링과 조기 개입 전략이 권장된다.</p>
+        </div>
+      </div>
+
+      <div class="callout callout-yellow">
+        &#9888;&#65039; 혈장 바이오마커를 PET 없이 단독으로 해석할 때, <strong>동반질환 확인은 필수</strong>이다. 특히 CKD, 고령, 고혈압/당뇨 환자에서는 결과 해석에 추가적인 주의가 요구된다.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 14: 강점과 한계
+       ============================================================ -->
+  <section id="sec14" class="section">
+    <div class="reveal">
+      <div class="section-number">14</div>
+      <span class="section-tag tag-evaluation">평가</span>
+      <h2 class="section-title">연구의 강점과 한계</h2>
+
+      <div class="two-col">
+        <div class="col">
+          <h3>강점</h3>
+          <ul class="clean-list accent-green">
+            <li><strong>대규모 3개 코호트</strong>: K-ROAD(2,611명), TRIAD(274명), ADNI(378명)를 포함한 다국적 검증으로 일반화 가능성을 확보하였다.</li>
+            <li><strong>다양한 바이오마커 비교</strong>: p-tau217, p-tau181, p-tau231, A&beta;42/40을 동시에 비교하여 최적 바이오마커를 객관적으로 선정하였다.</li>
+            <li><strong>종단적 인지 추적</strong>: 평균 3.63년(MMSE), 3.10년(CDR-SB)의 추적을 통해 불일치의 예후적 의미를 검증하였다.</li>
+            <li><strong>A&beta; + Tau PET</strong>: 두 가지 PET 영상을 모두 활용하여 아밀로이드와 타우 불일치를 별도로 분석하였다.</li>
+            <li><strong>동반질환 체계적 평가</strong>: 고혈압, 당뇨, CKD, BMI 등을 체계적으로 수집하여 불일치 원인을 다각도에서 규명하였다.</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3>한계</h3>
+          <ul class="clean-list accent-pink">
+            <li><strong>Tau PET 소규모</strong>: tau PET 시행 대상이 124명에 불과하여 하위 분석의 통계적 검정력이 제한적이다.</li>
+            <li><strong>코호트 간 tracer 상이</strong>: K-ROAD와 TRIAD/ADNI에서 서로 다른 PET 추적자를 사용하여 직접 비교에 제한이 있다.</li>
+            <li><strong>Cutoff 표준화 미비</strong>: 각 코호트별 양성 기준이 상이하며, 국제적으로 합의된 표준 cutoff가 아직 부재하다.</li>
+            <li><strong>관찰연구</strong>: 코호트 기반 관찰연구로서 인과관계 추론에 제한이 있다.</li>
+            <li><strong>자가보고 동반질환</strong>: 동반질환 정보가 자가보고에 의존하여 정보 편향(information bias) 가능성이 있다.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 15: 정리 & 토론
+       ============================================================ -->
+  <section id="sec15" class="section">
+    <div class="reveal">
+      <div class="section-number">15</div>
+      <span class="section-tag tag-core">정리</span>
+      <h2 class="section-title">정리 &amp; 세미나 토론 포인트</h2>
+
+      <div class="data-table">
+        <table>
+          <thead>
+            <tr>
+              <th>주제</th>
+              <th>핵심 발견</th>
+              <th>의미</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>일치율</td>
+              <td>p-tau217 최고 (90.5%)</td>
+              <td>최적 선별 바이오마커</td>
+            </tr>
+            <tr>
+              <td>P+/PET&minus;</td>
+              <td>고령, 동반질환 多</td>
+              <td>생물학적 변수 영향</td>
+            </tr>
+            <tr>
+              <td>P&minus;/PET+</td>
+              <td>BMI 높음</td>
+              <td>희석 효과 가능성</td>
+            </tr>
+            <tr>
+              <td>인지 궤적</td>
+              <td>P+/PET&minus;도 저하</td>
+              <td>PET 음성 &ne; 안심</td>
+            </tr>
+            <tr>
+              <td>Tau PET</td>
+              <td>불일치 차이 없음</td>
+              <td>이질적 기전</td>
+            </tr>
+            <tr>
+              <td>외부 검증</td>
+              <td>TRIAD 86.9%, ADNI 81.4%</td>
+              <td>재현성 확인</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>세미나 토론 포인트</h3>
+      <ul class="clean-list accent-purple">
+        <li><strong>혈장 단독 진단 시대</strong>: 혈장 바이오마커만으로 AD 진단이 가능한 시대가 올 것인가? p-tau217의 90.5% 일치율은 충분한가, 아니면 나머지 9.5%의 불일치가 임상적으로 허용 불가능한가?</li>
+        <li><strong>불일치 사례 의사결정</strong>: 불일치 사례에서 임상적 의사결정은 어떻게 해야 하는가? 혈장 양성/PET 음성 환자에게 항아밀로이드 항체 치료(lecanemab, donanemab)를 시작해야 하는가?</li>
+        <li><strong>동반질환 보정 알고리즘</strong>: 동반질환 보정 알고리즘 개발이 필요한가? CKD, BMI 등을 반영한 보정 공식이 혈장 바이오마커의 정확도를 개선할 수 있는가?</li>
+        <li><strong>혈장 기반 임상시험 선별</strong>: PET 없이 혈장 기반 임상시험 참여자 선별은 적절한가? 비용 절감과 정확도 사이의 균형점은 어디인가?</li>
+        <li><strong>새로운 진단 프레임워크</strong>: 시간적 역동성을 반영한 새로운 진단 프레임워크가 필요한가? 단일 시점의 양성/음성 이분법을 넘어, 연속적 모니터링 기반의 동적 진단 체계가 가능한가?</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 16: 참고문헌
+       ============================================================ -->
+  <section id="sec16" class="section">
+    <div class="reveal">
+      <div class="section-number">16</div>
+      <span class="section-tag tag-background">참고</span>
+      <h2 class="section-title">참고문헌</h2>
+
+      <ol class="reference-list">
+        <li>Yun J, Kim H, Park J, et al. Temporal dynamics and biological variability of Alzheimer biomarkers. <em>JAMA Neurology</em>. 2025;82(4):384-396. doi:10.1001/jamaneurol.2025.0001</li>
+        <li>Hansson O, Edelmayer RM, Ossenkoppele R, et al. The Alzheimer's Association appropriate use recommendations for blood biomarkers in Alzheimer's disease. <em>Alzheimers Dement</em>. 2022;18(12):2669-2686.</li>
+        <li>Ashton NJ, Brum WS, Di Molfetta G, et al. Diagnostic accuracy of a plasma phosphorylated tau 217 immunoassay for Alzheimer disease pathology. <em>JAMA Neurology</em>. 2024;81(5):561-569.</li>
+        <li>Jack CR Jr, Andrews JS, Beach TG, et al. Revised criteria for diagnosis and staging of Alzheimer's disease: Alzheimer's Association Workgroup. <em>Alzheimers Dement</em>. 2024;20(8):5143-5169.</li>
+        <li>Palmqvist S, Janelidze S, Quiroz YT, et al. Discriminative accuracy of plasma phospho-tau217 for Alzheimer disease vs other neurodegenerative disorders. <em>JAMA</em>. 2020;324(8):772-781.</li>
+        <li>Ossenkoppele R, Pichet Binette A, Groot C, et al. Amyloid and tau PET-positive cognitively unimpaired individuals are at high risk for future cognitive decline. <em>Nat Med</em>. 2022;28(11):2381-2387.</li>
+        <li>Therriault J, Vermeiren M, Servaes S, et al. Association of phosphorylated tau biomarkers with amyloid positron emission tomography vs tau positron emission tomography. <em>JAMA Neurology</em>. 2023;80(2):188-199.</li>
+        <li>Janelidze S, Bali D, Ashton NJ, et al. Head-to-head comparison of 10 plasma phospho-tau assays in prodromal Alzheimer's disease. <em>Brain</em>. 2023;146(4):1592-1601.</li>
+      </ol>
+    </div>
+  </section>
+
+  </div><!-- /.page -->
+
+  <!-- ============================================================
+       NAV DOTS (Fixed Right Sidebar)
+       ============================================================ -->
+  <nav class="nav-dots">
+    <a class="nav-dot" data-target="#sec01" data-label="핵심 요약"></a>
+    <a class="nav-dot" data-target="#sec02" data-label="연구 배경"></a>
+    <a class="nav-dot" data-target="#sec03" data-label="연구 목적"></a>
+    <a class="nav-dot" data-target="#sec04" data-label="연구 대상"></a>
+    <a class="nav-dot" data-target="#sec05" data-label="바이오마커 측정"></a>
+    <a class="nav-dot" data-target="#sec06" data-label="일치율 비교"></a>
+    <a class="nav-dot" data-target="#sec07" data-label="Aβ PET 불일치"></a>
+    <a class="nav-dot" data-target="#sec08" data-label="불일치 기전"></a>
+    <a class="nav-dot" data-target="#sec09" data-label="인지 변화 궤적"></a>
+    <a class="nav-dot" data-target="#sec10" data-label="동반질환 역할"></a>
+    <a class="nav-dot" data-target="#sec11" data-label="Tau PET 불일치"></a>
+    <a class="nav-dot" data-target="#sec12" data-label="시간적 역동성"></a>
+    <a class="nav-dot" data-target="#sec13" data-label="임상적 함의"></a>
+    <a class="nav-dot" data-target="#sec14" data-label="강점과 한계"></a>
+    <a class="nav-dot" data-target="#sec15" data-label="정리 & 토론"></a>
+    <a class="nav-dot" data-target="#sec16" data-label="참고문헌"></a>
+  </nav>
+
+  <!-- ============================================================
+       LIGHTBOX
+       ============================================================ -->
+  <div class="lightbox">
+    <button class="lightbox-close">&times;</button>
+    <div class="lightbox-content">
+      <img src="" alt="Lightbox image">
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SCROLL TO TOP
+       ============================================================ -->
+  <button class="scroll-top" aria-label="맨 위로 스크롤">&uarr;</button>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <span class="footer-left">논문 세미나 &middot; 2025.02.25</span>
+      <span class="footer-right">JAMA Neurology 2025;82(4):384-396</span>
+    </div>
+  </footer>
+
+</body>
+</html>

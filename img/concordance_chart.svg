@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" font-family="'Segoe UI', Arial, sans-serif">
+  <!-- Background -->
+  <rect width="760" height="440" fill="#f8f9fa" rx="12"/>
+
+  <!-- Title -->
+  <text x="380" y="34" text-anchor="middle" font-size="16" font-weight="700" fill="#1a1a2e">혈장 바이오마커별 PET 일치율 비교</text>
+  <text x="380" y="52" text-anchor="middle" font-size="11" fill="#666">Plasma Biomarker–PET Concordance Rates — Yun et al., JAMA Neurology 2025</text>
+
+  <!-- Legend -->
+  <rect x="440" y="65" width="16" height="14" rx="3" fill="#4a6fa5"/>
+  <text x="462" y="77" font-size="11" fill="#333">Aβ PET 일치율</text>
+  <rect x="590" y="65" width="16" height="14" rx="3" fill="#e07b54"/>
+  <text x="612" y="77" font-size="11" fill="#333">Tau PET 일치율</text>
+
+  <!-- Chart area -->
+  <!-- Y-axis label -->
+  <text x="14" y="245" text-anchor="middle" font-size="11" fill="#555" transform="rotate(-90, 14, 245)">일치율 (%)</text>
+
+  <!-- Y gridlines and labels -->
+  <!-- 100% line -->
+  <line x1="90" y1="95" x2="710" y2="95" stroke="#ddd" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="82" y="99" text-anchor="end" font-size="10" fill="#888">100%</text>
+  <!-- 90% line -->
+  <line x1="90" y1="127" x2="710" y2="127" stroke="#ddd" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="82" y="131" text-anchor="end" font-size="10" fill="#888">90%</text>
+  <!-- 80% line -->
+  <line x1="90" y1="159" x2="710" y2="159" stroke="#ddd" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="82" y="163" text-anchor="end" font-size="10" fill="#888">80%</text>
+  <!-- 70% line -->
+  <line x1="90" y1="191" x2="710" y2="191" stroke="#ddd" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="82" y="195" text-anchor="end" font-size="10" fill="#888">70%</text>
+  <!-- 60% line -->
+  <line x1="90" y1="223" x2="710" y2="223" stroke="#ddd" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="82" y="227" text-anchor="end" font-size="10" fill="#888">60%</text>
+
+  <!-- X-axis baseline at 60% (y=223) — chart floor at 60% for readability -->
+  <line x1="90" y1="223" x2="710" y2="223" stroke="#bbb" stroke-width="1.5"/>
+
+  <!--
+    Scale: 60%=223, 100%=95. Range=40%, height=128px. 1%=3.2px
+    Each bar group: 4 biomarkers
+    Group width: ~150px each, bars 30px wide, gap 8px between pair, 40px between groups
+
+    Groups: p-tau217 (x=130), p-tau181 (x=290), p-tau231 (x=450), Aβ42/40 (x=610)
+
+    Values (floor at 60%):
+    p-tau217:  Aβ 90.5% → h=(90.5-60)*3.2=97.6  Tau 83.3% → h=(83.3-60)*3.2=74.6
+    p-tau181:  Aβ 77.4% → h=(77.4-60)*3.2=55.7   Tau 77.5% → h=(77.5-60)*3.2=56.0
+    p-tau231:  Aβ 77.3% → h=(77.3-60)*3.2=55.4   Tau N/A
+    Aβ42/40:   Aβ 77.1% → h=(77.1-60)*3.2=54.7   Tau N/A
+  -->
+
+  <!-- p-tau217 group -->
+  <!-- Aβ PET bar: 90.5% -->
+  <rect x="118" y="125.4" width="36" height="97.6" rx="3" fill="#4a6fa5"/>
+  <rect x="118" y="125.4" width="36" height="6" rx="3" fill="#6a8fc5"/>
+  <!-- Tau PET bar: 83.3% -->
+  <rect x="160" y="148.4" width="36" height="74.6" rx="3" fill="#e07b54"/>
+  <rect x="160" y="148.4" width="36" height="6" rx="3" fill="#f09b74"/>
+
+  <!-- Labels on bars -->
+  <text x="136" y="120" text-anchor="middle" font-size="11" font-weight="700" fill="#2c4d7a">90.5%</text>
+  <text x="178" y="143" text-anchor="middle" font-size="11" font-weight="700" fill="#a04020">83.3%</text>
+
+  <!-- p-tau181 group -->
+  <!-- Aβ PET bar: 77.4% -->
+  <rect x="288" y="167.3" width="36" height="55.7" rx="3" fill="#4a6fa5" opacity="0.75"/>
+  <!-- Tau PET bar: 77.5% -->
+  <rect x="330" y="167.0" width="36" height="56.0" rx="3" fill="#e07b54" opacity="0.75"/>
+  <text x="306" y="162" text-anchor="middle" font-size="11" fill="#4a6fa5">77.4%</text>
+  <text x="348" y="162" text-anchor="middle" font-size="11" fill="#e07b54">77.5%</text>
+
+  <!-- p-tau231 group -->
+  <!-- Aβ PET bar: 77.3% -->
+  <rect x="458" y="167.6" width="36" height="55.4" rx="3" fill="#4a6fa5" opacity="0.65"/>
+  <!-- No Tau bar -->
+  <text x="476" y="162" text-anchor="middle" font-size="11" fill="#4a6fa5">77.3%</text>
+
+  <!-- Aβ42/40 group -->
+  <!-- Aβ PET bar: 77.1% -->
+  <rect x="618" y="168.3" width="36" height="54.7" rx="3" fill="#4a6fa5" opacity="0.55"/>
+  <!-- No Tau bar -->
+  <text x="636" y="162" text-anchor="middle" font-size="11" fill="#4a6fa5">77.1%</text>
+
+  <!-- X-axis labels -->
+  <text x="157" y="244" text-anchor="middle" font-size="13" font-weight="700" fill="#1a1a2e">p-tau217</text>
+  <text x="157" y="259" text-anchor="middle" font-size="10" fill="#e07b54" font-weight="600">★ 최고 성능</text>
+  <text x="316" y="244" text-anchor="middle" font-size="12" fill="#333">p-tau181</text>
+  <text x="476" y="244" text-anchor="middle" font-size="12" fill="#333">p-tau231</text>
+  <text x="636" y="244" text-anchor="middle" font-size="12" fill="#333">Aβ42/40</text>
+
+  <!-- Difference annotation for p-tau217 -->
+  <line x1="136" y1="115" x2="136" y2="105" stroke="#2c4d7a" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="136" y1="105" x2="320" y2="105" stroke="#2c4d7a" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="320" y1="105" x2="320" y2="115" stroke="#2c4d7a" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="228" y="101" text-anchor="middle" font-size="10" fill="#2c4d7a">+13%p 이상 차이</text>
+
+  <!-- Bottom annotation box -->
+  <rect x="90" y="278" width="580" height="62" rx="8" fill="white" stroke="#dde6f0" stroke-width="1.5"/>
+  <text x="380" y="298" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a2e">데이터 출처 (K-ROAD 코호트 기준, n=2,571)</text>
+  <text x="380" y="316" text-anchor="middle" font-size="11" fill="#444">p-tau217: 2326/2571명 일치 (Aβ) · 100/120명 일치 (Tau)</text>
+  <text x="380" y="332" text-anchor="middle" font-size="11" fill="#888">p-tau231 및 Aβ42/40의 Tau PET 일치율 데이터는 미보고</text>
+
+  <!-- Footer -->
+  <text x="380" y="418" text-anchor="middle" font-size="10" fill="#aaa">Yun J et al. JAMA Neurology. 2025;82(4):386–397. © 2025 American Medical Association.</text>
+
+  <!-- Highlight ring on best bar -->
+  <rect x="115" y="122" width="42" height="104" rx="4" fill="none" stroke="#ffd700" stroke-width="2.5" opacity="0.8"/>
+</svg>
