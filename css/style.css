@@ -1796,6 +1796,96 @@ pre {
 }
 
 /* ----------------------------------------------------------
+   29b. Figure Annotation
+   ---------------------------------------------------------- */
+.figure-annotation {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.8rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.figure-annotation h4 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--accent-blue);
+  display: inline-block;
+}
+
+.annotation-panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.annotation-panel {
+  background: var(--bg-code);
+  border-radius: var(--radius-md);
+  padding: 1.2rem 1.4rem;
+  border: 1px solid var(--border);
+}
+
+.annotation-panel-label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--accent-purple);
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px dashed var(--accent-purple-soft-border);
+}
+
+.annotation-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.annotation-panel li {
+  font-size: 0.84rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  padding: 0.3rem 0;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.06);
+}
+
+.annotation-panel li:last-child {
+  border-bottom: none;
+}
+
+.annotation-panel li strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.annotation-panel li em {
+  color: var(--accent-pink);
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Responsive: stack panels on mobile */
+@media (max-width: 768px) {
+  .annotation-panels {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .figure-annotation {
+    padding: 1.2rem 1rem;
+  }
+}
+
+/* ----------------------------------------------------------
    30. Print Styles
    ---------------------------------------------------------- */
 @media print {
