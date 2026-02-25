@@ -326,6 +326,8 @@ a:hover {
 
 .hero-meta-item .icon {
   font-size: 0.9rem;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  font-style: normal;
 }
 
 /* Scroll hint */
@@ -1989,7 +1991,7 @@ pre {
 }
 
 .step-flow-vertical .step-arrow {
-  transform: rotate(90deg);
+  transform: none;
   margin: 4px auto;
   display: block;
   text-align: center;
