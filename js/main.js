@@ -242,8 +242,10 @@ document.addEventListener('DOMContentLoaded', () => {
         ]
       });
     }
+    document.body.classList.add('katex-rendered');
   } catch (err) {
     console.warn('KaTeX auto-render failed:', err);
+    document.body.classList.add('katex-rendered');
   }
 
 
@@ -265,6 +267,39 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+
+  /* ==========================================================================
+     Discordance Legend — show sticky legend when sec07-sec12 are in view
+     ========================================================================== */
+  const discordanceLegend = document.getElementById('discordance-legend');
+
+  if (discordanceLegend) {
+    const discordanceSections = ['sec07', 'sec08', 'sec09', 'sec10', 'sec11', 'sec12'];
+    const activeSections = new Set();
+
+    const legendObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const id = entry.target.getAttribute('id');
+        if (entry.isIntersecting) {
+          activeSections.add(id);
+        } else {
+          activeSections.delete(id);
+        }
+      });
+
+      if (activeSections.size > 0) {
+        discordanceLegend.classList.add('visible');
+      } else {
+        discordanceLegend.classList.remove('visible');
+      }
+    }, { threshold: 0.1 });
+
+    discordanceSections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) legendObserver.observe(el);
+    });
+  }
 
 
   /* ==========================================================================

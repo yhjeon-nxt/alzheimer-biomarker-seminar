@@ -374,6 +374,112 @@ a:hover {
   animation: scroll-bounce 2s ease-in-out infinite;
 }
 
+/* Hero conclusion */
+.hero-conclusion {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 560px;
+  margin: 1.2rem auto 0;
+  padding: 0.8rem 1.2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  border-left: 3px solid rgba(90, 200, 250, 0.5);
+}
+
+/* Hero link buttons */
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.hero-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+.hero-link-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero-link-btn span {
+  font-weight: 700;
+  color: rgba(90, 200, 250, 0.9);
+}
+
+.hero-link-pubmed span {
+  color: rgba(52, 211, 153, 0.9);
+}
+
+/* Hero cohort mini diagram */
+.hero-cohort-mini {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.cohort-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.35rem 0.7rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.3;
+}
+
+.cohort-chip strong {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: var(--font-mono);
+}
+
+.cohort-flag {
+  font-size: 0.6rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  padding: 2px 5px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.cohort-total {
+  background: rgba(0, 113, 227, 0.15);
+  border-color: rgba(0, 113, 227, 0.25);
+}
+
+.cohort-total strong {
+  color: #5ac8fa;
+}
+
+.cohort-plus, .cohort-equals {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 /* ----------------------------------------------------------
    4. Progress Bar
    ---------------------------------------------------------- */
@@ -836,6 +942,26 @@ h3 {
   font-weight: 700;
   background: var(--accent-pink-soft-bg);
   color: var(--accent-pink);
+}
+
+/* Table captions */
+.table-caption {
+  caption-side: top;
+  text-align: left;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  padding: 0.75rem 0 0.5rem;
+  line-height: 1.5;
+}
+
+.table-note {
+  display: block;
+  font-size: 0.76rem;
+  font-weight: 400;
+  color: var(--text-caption);
+  margin-top: 4px;
+  font-style: italic;
 }
 
 /* ----------------------------------------------------------
@@ -1702,6 +1828,18 @@ pre {
     text-align: center;
     padding: 2rem 1rem;
   }
+
+  .hero-cohort-mini {
+    gap: 0.3rem;
+  }
+  .cohort-chip {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.5rem;
+  }
+  .hero-links {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /* Mobile small */
@@ -1889,34 +2027,105 @@ pre {
    30. Print Styles
    ---------------------------------------------------------- */
 @media print {
-  .hero {
-    min-height: auto;
-    padding: 2rem;
-    background: #1d1d1f;
-    page-break-after: always;
-  }
-
+  /* Hide non-printable elements */
   .hero-orb,
+  .hero-grid,
   .scroll-hint,
   .progress-bar,
   .nav-dots,
   .scroll-top,
-  .lightbox {
+  .lightbox,
+  .discordance-legend,
+  .hero-links {
     display: none !important;
   }
 
+  /* Ensure all reveals are visible */
   .reveal {
     opacity: 1 !important;
     transform: none !important;
   }
 
+  /* Base */
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 11pt;
+    line-height: 1.6;
+  }
+
+  /* Hero section: compact print header */
+  .hero {
+    min-height: auto !important;
+    padding: 1.5rem !important;
+    background: #1a1040 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    page-break-after: always;
+  }
+
+  /* Page breaks */
   .section {
     page-break-inside: avoid;
   }
 
-  body {
-    background: #fff;
-    color: #000;
+  #sec06, #sec09, #sec11, #sec13, #sec16 {
+    page-break-before: always;
+  }
+
+  .callout,
+  .figure,
+  .figure-annotation,
+  .data-table {
+    page-break-inside: avoid;
+  }
+
+  /* Figures */
+  .figure img {
+    max-width: 100% !important;
+    max-height: 400px !important;
+    object-fit: contain;
+  }
+
+  /* Show link URLs in references */
+  .reference-list a[href]::after {
+    content: " [" attr(href) "]";
+    font-size: 0.7rem;
+    color: #666;
+    word-break: break-all;
+  }
+
+  /* Cards: clean for print */
+  .card-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .card {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+
+  .card:hover {
+    transform: none !important;
+  }
+
+  /* Force background colors */
+  .callout,
+  .card,
+  .prop-item,
+  .data-table th {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Math */
+  .math-block {
+    color: #000 !important;
+  }
+
+  /* TOC */
+  .toc {
+    page-break-after: always;
   }
 }
 
@@ -2163,6 +2372,12 @@ pre {
   line-height: 1.8;
 }
 
+/* Math FOUC prevention */
+body:not(.katex-rendered) .math-block {
+  color: transparent;
+  min-height: 3.5rem;
+}
+
 /* --------------------------------------------------------------------------
    S9. Reference List
    -------------------------------------------------------------------------- */
@@ -2185,6 +2400,18 @@ pre {
   font-size: 0.75rem;
   color: var(--accent-blue);
   font-weight: 600;
+}
+
+/* Reference links */
+.reference-list a {
+  color: var(--accent-blue);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.reference-list a:hover {
+  text-decoration: underline;
+  color: var(--accent-blue);
 }
 
 /* --------------------------------------------------------------------------
@@ -2325,3 +2552,73 @@ pre {
   font-variant-numeric: tabular-nums;
 }
 
+/* ========================================================================
+   Discordance Sticky Legend
+   ======================================================================== */
+.discordance-legend {
+  position: fixed;
+  left: 24px;
+  bottom: 24px;
+  z-index: 900;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0.7rem 0.9rem;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+}
+
+.discordance-legend.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.74rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.legend-item strong {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legend-pink .legend-dot { background: var(--accent-pink); }
+.legend-orange .legend-dot { background: var(--accent-orange); }
+.legend-pink strong { color: var(--accent-pink); }
+.legend-orange strong { color: var(--accent-orange); }
+
+@media (max-width: 768px) {
+  .discordance-legend {
+    left: 12px;
+    bottom: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .discordance-legend {
+    display: none !important;
+  }
+}
