@@ -1,100 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="'Segoe UI', Arial, sans-serif">
-  <!-- Background -->
-  <rect width="800" height="520" fill="#f8f9fa" rx="12"/>
-
-  <!-- Title -->
-  <text x="400" y="38" text-anchor="middle" font-size="17" font-weight="700" fill="#1a1a2e">연구 설계 흐름도</text>
-  <text x="400" y="57" text-anchor="middle" font-size="12" fill="#555">Study Design Flowchart — Yun et al., JAMA Neurology 2025</text>
-
-  <!-- ===== TOP: Plasma Biomarkers Box ===== -->
-  <rect x="250" y="75" width="300" height="56" rx="8" fill="#4a6fa5" stroke="#2c4d7a" stroke-width="1.5"/>
-  <text x="400" y="97" text-anchor="middle" font-size="13" font-weight="700" fill="white">혈장 바이오마커 측정</text>
-  <text x="400" y="114" text-anchor="middle" font-size="11" fill="#d0e0ff">p-tau217 · p-tau181 · p-tau231 · Aβ42/40</text>
-
-  <!-- Arrow down -->
-  <line x1="400" y1="131" x2="400" y2="148" stroke="#4a6fa5" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <!-- ===== MIDDLE: 3 Cohorts ===== -->
-  <!-- K-ROAD -->
-  <rect x="30" y="155" width="215" height="90" rx="8" fill="white" stroke="#4a6fa5" stroke-width="1.8"/>
-  <rect x="30" y="155" width="215" height="28" rx="8" fill="#4a6fa5"/>
-  <rect x="30" y="169" width="215" height="14" fill="#4a6fa5"/>
-  <text x="137" y="173" text-anchor="middle" font-size="13" font-weight="700" fill="white">K-ROAD</text>
-  <text x="137" y="188" text-anchor="middle" font-size="10" fill="#cce0ff">Korea</text>
-  <text x="137" y="208" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a2e">n = 2,611</text>
-  <text x="137" y="224" text-anchor="middle" font-size="10" fill="#444">평균연령 71.2세 · 여성 63.4%</text>
-  <text x="137" y="238" text-anchor="middle" font-size="10" fill="#555">Aβ PET (18F-florbetaben)</text>
-
-  <!-- TRIAD -->
-  <rect x="292" y="155" width="215" height="90" rx="8" fill="white" stroke="#e07b54" stroke-width="1.8"/>
-  <rect x="292" y="155" width="215" height="28" rx="8" fill="#e07b54"/>
-  <rect x="292" y="169" width="215" height="14" fill="#e07b54"/>
-  <text x="400" y="173" text-anchor="middle" font-size="13" font-weight="700" fill="white">TRIAD</text>
-  <text x="400" y="188" text-anchor="middle" font-size="10" fill="#ffe0d0">Canada (McGill Univ.)</text>
-  <text x="400" y="208" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a2e">n = 274</text>
-  <text x="400" y="224" text-anchor="middle" font-size="10" fill="#444">Quanterix 플랫폼</text>
-  <text x="400" y="238" text-anchor="middle" font-size="10" fill="#555">Aβ PET + Tau PET</text>
-
-  <!-- ADNI -->
-  <rect x="555" y="155" width="215" height="90" rx="8" fill="white" stroke="#5aaa8a" stroke-width="1.8"/>
-  <rect x="555" y="155" width="215" height="28" rx="8" fill="#5aaa8a"/>
-  <rect x="555" y="169" width="215" height="14" fill="#5aaa8a"/>
-  <text x="662" y="173" text-anchor="middle" font-size="13" font-weight="700" fill="white">ADNI</text>
-  <text x="662" y="188" text-anchor="middle" font-size="10" fill="#d0fff0">USA (Multi-center)</text>
-  <text x="662" y="208" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a2e">n = 378</text>
-  <text x="662" y="224" text-anchor="middle" font-size="10" fill="#444">Quanterix 플랫폼</text>
-  <text x="662" y="238" text-anchor="middle" font-size="10" fill="#555">Aβ PET + Tau PET</text>
-
-  <!-- Lines from top box to cohorts -->
-  <line x1="350" y1="131" x2="137" y2="155" stroke="#4a6fa5" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <line x1="400" y1="131" x2="400" y2="155" stroke="#e07b54" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <line x1="450" y1="131" x2="662" y2="155" stroke="#5aaa8a" stroke-width="1.5" stroke-dasharray="5,3"/>
-
-  <!-- Total participants badge -->
-  <rect x="315" y="68" width="170" height="0" rx="6" fill="none"/>
-
-  <!-- Arrows from cohorts down -->
-  <line x1="137" y1="245" x2="137" y2="268" stroke="#4a6fa5" stroke-width="2" marker-end="url(#arrow2)"/>
-  <line x1="400" y1="245" x2="400" y2="268" stroke="#e07b54" stroke-width="2" marker-end="url(#arrow3)"/>
-  <line x1="662" y1="245" x2="662" y2="268" stroke="#5aaa8a" stroke-width="2" marker-end="url(#arrow4)"/>
-
-  <!-- ===== ANALYSIS BOXES ===== -->
-  <!-- K-ROAD analysis -->
-  <rect x="30" y="275" width="215" height="52" rx="6" fill="#eef3ff" stroke="#4a6fa5" stroke-width="1.2"/>
-  <text x="137" y="296" text-anchor="middle" font-size="11" font-weight="600" fill="#2c4d7a">Aβ PET 불일치 분석</text>
-  <text x="137" y="312" text-anchor="middle" font-size="10" fill="#4a6fa5">2,571명 (p-tau217 기준)</text>
-  <text x="137" y="325" text-anchor="middle" font-size="10" fill="#555">concordance 90.5%</text>
-
-  <!-- TRIAD analysis -->
-  <rect x="292" y="275" width="215" height="52" rx="6" fill="#fff2ee" stroke="#e07b54" stroke-width="1.2"/>
-  <text x="400" y="296" text-anchor="middle" font-size="11" font-weight="600" fill="#a04020">Aβ PET + Tau PET 분석</text>
-  <text x="400" y="312" text-anchor="middle" font-size="10" fill="#e07b54">Aβ 86.9% / Tau concordance</text>
-  <text x="400" y="325" text-anchor="middle" font-size="10" fill="#555">discordance 생물학 분석</text>
-
-  <!-- ADNI analysis -->
-  <rect x="555" y="275" width="215" height="52" rx="6" fill="#edfaf4" stroke="#5aaa8a" stroke-width="1.2"/>
-  <text x="662" y="296" text-anchor="middle" font-size="11" font-weight="600" fill="#2a7a5a">Aβ PET + Tau PET 분석</text>
-  <text x="662" y="312" text-anchor="middle" font-size="10" fill="#5aaa8a">Aβ 81.4% / Tau concordance</text>
-  <text x="662" y="325" text-anchor="middle" font-size="10" fill="#555">종단 인지 변화 추적</text>
-
-  <!-- Arrows to final box -->
-  <line x1="137" y1="327" x2="280" y2="378" stroke="#666" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <line x1="400" y1="327" x2="400" y2="378" stroke="#666" stroke-width="1.5" marker-end="url(#arrow5)"/>
-  <line x1="662" y1="327" x2="520" y2="378" stroke="#666" stroke-width="1.5" stroke-dasharray="4,3"/>
-
-  <!-- ===== BOTTOM: Outcome Box ===== -->
-  <rect x="180" y="385" width="440" height="80" rx="8" fill="#1a1a2e" stroke="#4a6fa5" stroke-width="2"/>
-  <text x="400" y="408" text-anchor="middle" font-size="13" font-weight="700" fill="white">주요 결과 (Primary Outcomes)</text>
-  <text x="400" y="428" text-anchor="middle" font-size="11" fill="#aac0e0">① 4그룹 불일치 패턴 및 임상적 의미</text>
-  <text x="400" y="445" text-anchor="middle" font-size="11" fill="#aac0e0">② 그룹별 종단 인지 변화 궤적 (MMSE, CDR-SB)</text>
-  <text x="400" y="462" text-anchor="middle" font-size="11" fill="#aac0e0">③ 불일치 메커니즘 (동반질환, 생물학적 이질성)</text>
-
-  <!-- Total badge top right -->
-  <rect x="600" y="72" width="165" height="32" rx="16" fill="#e07b54"/>
-  <text x="682" y="87" text-anchor="middle" font-size="11" font-weight="700" fill="white">총 참여자 N = 3,263</text>
-  <text x="682" y="101" text-anchor="middle" font-size="10" fill="#ffe0d0">3개국 다국적 코호트</text>
-
-  <!-- Arrowhead marker -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 570" font-family="'Inter', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <!-- Marker definitions -->
   <defs>
     <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
       <path d="M0,0 L8,4 L0,8 Z" fill="#4a6fa5"/>
@@ -112,4 +17,96 @@
       <path d="M0,0 L8,4 L0,8 Z" fill="#666"/>
     </marker>
   </defs>
+
+  <!-- Background -->
+  <rect width="840" height="570" fill="#f8f9fa" rx="12"/>
+
+  <!-- Title -->
+  <text x="420" y="38" text-anchor="middle" font-size="17" font-weight="700" fill="#1a1a2e">연구 설계 흐름도</text>
+  <text x="420" y="57" text-anchor="middle" font-size="12" fill="#555">Study Design Flowchart — Yun et al., JAMA Neurology 2025</text>
+
+  <!-- ===== TOP: Plasma Biomarkers Box ===== -->
+  <rect x="270" y="75" width="300" height="56" rx="8" fill="#4a6fa5" stroke="#2c4d7a" stroke-width="1.5"/>
+  <text x="420" y="97" text-anchor="middle" font-size="13" font-weight="700" fill="white">혈장 바이오마커 측정</text>
+  <text x="420" y="114" text-anchor="middle" font-size="11" fill="#d0e0ff">p-tau217 · p-tau181 · p-tau231 · Aβ42/40</text>
+
+  <!-- Arrow down -->
+  <line x1="420" y1="131" x2="420" y2="153" stroke="#4a6fa5" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Lines from top box to cohorts -->
+  <line x1="370" y1="131" x2="157" y2="160" stroke="#4a6fa5" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="420" y1="131" x2="420" y2="160" stroke="#e07b54" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="470" y1="131" x2="682" y2="160" stroke="#5aaa8a" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- ===== MIDDLE: 3 Cohorts ===== -->
+  <!-- K-ROAD -->
+  <rect x="50" y="160" width="215" height="100" rx="8" fill="white" stroke="#4a6fa5" stroke-width="1.8"/>
+  <rect x="50" y="160" width="215" height="40" rx="8" fill="#4a6fa5"/>
+  <rect x="50" y="174" width="215" height="26" fill="#4a6fa5"/>
+  <text x="157" y="180" text-anchor="middle" font-size="13" font-weight="700" fill="white">K-ROAD</text>
+  <text x="157" y="196" text-anchor="middle" font-size="10" fill="#cce0ff">Korea</text>
+  <text x="157" y="218" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a2e">n = 2,611</text>
+  <text x="157" y="234" text-anchor="middle" font-size="10" fill="#444">평균연령 71.2세 · 여성 63.4%</text>
+  <text x="157" y="248" text-anchor="middle" font-size="10" fill="#555">Aβ PET (¹⁸F-florbetaben)</text>
+
+  <!-- TRIAD -->
+  <rect x="312" y="160" width="215" height="100" rx="8" fill="white" stroke="#e07b54" stroke-width="1.8"/>
+  <rect x="312" y="160" width="215" height="40" rx="8" fill="#e07b54"/>
+  <rect x="312" y="174" width="215" height="26" fill="#e07b54"/>
+  <text x="420" y="180" text-anchor="middle" font-size="13" font-weight="700" fill="white">TRIAD</text>
+  <text x="420" y="196" text-anchor="middle" font-size="10" fill="#ffe0d0">Canada (McGill Univ.)</text>
+  <text x="420" y="218" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a2e">n = 274</text>
+  <text x="420" y="234" text-anchor="middle" font-size="10" fill="#444">Quanterix 플랫폼</text>
+  <text x="420" y="248" text-anchor="middle" font-size="10" fill="#555">Aβ PET + Tau PET</text>
+
+  <!-- ADNI -->
+  <rect x="575" y="160" width="215" height="100" rx="8" fill="white" stroke="#5aaa8a" stroke-width="1.8"/>
+  <rect x="575" y="160" width="215" height="40" rx="8" fill="#5aaa8a"/>
+  <rect x="575" y="174" width="215" height="26" fill="#5aaa8a"/>
+  <text x="682" y="180" text-anchor="middle" font-size="13" font-weight="700" fill="white">ADNI</text>
+  <text x="682" y="196" text-anchor="middle" font-size="10" fill="#d0fff0">USA (Multi-center)</text>
+  <text x="682" y="218" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a2e">n = 378</text>
+  <text x="682" y="234" text-anchor="middle" font-size="10" fill="#444">Quanterix 플랫폼</text>
+  <text x="682" y="248" text-anchor="middle" font-size="10" fill="#555">Aβ PET + Tau PET</text>
+
+  <!-- Arrows from cohorts down -->
+  <line x1="157" y1="260" x2="157" y2="283" stroke="#4a6fa5" stroke-width="2" marker-end="url(#arrow2)"/>
+  <line x1="420" y1="260" x2="420" y2="283" stroke="#e07b54" stroke-width="2" marker-end="url(#arrow3)"/>
+  <line x1="682" y1="260" x2="682" y2="283" stroke="#5aaa8a" stroke-width="2" marker-end="url(#arrow4)"/>
+
+  <!-- ===== ANALYSIS BOXES ===== -->
+  <!-- K-ROAD analysis -->
+  <rect x="50" y="290" width="215" height="58" rx="6" fill="#eef3ff" stroke="#4a6fa5" stroke-width="1.2"/>
+  <text x="157" y="311" text-anchor="middle" font-size="11" font-weight="600" fill="#2c4d7a">Aβ PET 불일치 분석</text>
+  <text x="157" y="328" text-anchor="middle" font-size="10" fill="#4a6fa5">2,571명 (p-tau217 기준)</text>
+  <text x="157" y="343" text-anchor="middle" font-size="10" fill="#555">일치율 90.5%</text>
+
+  <!-- TRIAD analysis -->
+  <rect x="312" y="290" width="215" height="58" rx="6" fill="#fff2ee" stroke="#e07b54" stroke-width="1.2"/>
+  <text x="420" y="311" text-anchor="middle" font-size="11" font-weight="600" fill="#a04020">Aβ PET + Tau PET 분석</text>
+  <text x="420" y="328" text-anchor="middle" font-size="10" fill="#e07b54">Aβ 86.9% / Tau 일치율</text>
+  <text x="420" y="343" text-anchor="middle" font-size="10" fill="#555">불일치 생물학적 분석</text>
+
+  <!-- ADNI analysis -->
+  <rect x="575" y="290" width="215" height="58" rx="6" fill="#edfaf4" stroke="#5aaa8a" stroke-width="1.2"/>
+  <text x="682" y="311" text-anchor="middle" font-size="11" font-weight="600" fill="#2a7a5a">Aβ PET + Tau PET 분석</text>
+  <text x="682" y="328" text-anchor="middle" font-size="10" fill="#5aaa8a">Aβ 81.4% / Tau 일치율</text>
+  <text x="682" y="343" text-anchor="middle" font-size="10" fill="#555">종단 인지 변화 추적</text>
+
+  <!-- Arrows to final box -->
+  <line x1="157" y1="348" x2="300" y2="405" stroke="#666" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="420" y1="348" x2="420" y2="405" stroke="#666" stroke-width="1.5" marker-end="url(#arrow5)"/>
+  <line x1="682" y1="348" x2="540" y2="405" stroke="#666" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- ===== BOTTOM: Outcome Box ===== -->
+  <rect x="200" y="412" width="440" height="90" rx="8" fill="#1a1a2e" stroke="#4a6fa5" stroke-width="2"/>
+  <text x="420" y="436" text-anchor="middle" font-size="13" font-weight="700" fill="white">주요 결과 (Primary Outcomes)</text>
+  <text x="420" y="458" text-anchor="middle" font-size="11" fill="#aac0e0">① 4그룹 불일치 패턴 및 임상적 의미</text>
+  <text x="420" y="476" text-anchor="middle" font-size="11" fill="#aac0e0">② 그룹별 종단 인지 변화 궤적 (MMSE, CDR-SB)</text>
+  <text x="420" y="494" text-anchor="middle" font-size="11" fill="#aac0e0">③ 불일치 메커니즘 (동반질환, 생물학적 이질성)</text>
+
+  <!-- Total badge top right -->
+  <rect x="620" y="72" width="175" height="40" rx="16" fill="#e07b54"/>
+  <text x="707" y="90" text-anchor="middle" font-size="11" font-weight="700" fill="white">총 참여자 N = 3,263</text>
+  <text x="707" y="106" text-anchor="middle" font-size="10" fill="#ffe0d0">3개국 다국적 코호트</text>
 </svg>
