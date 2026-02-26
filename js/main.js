@@ -10,6 +10,9 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // Reduced motion preference
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   /* ==========================================================================
      1. Reading Progress Bar
      - Fixed bar at the top of the page whose width reflects scroll progress.
@@ -63,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (scrollTopBtn) {
     scrollTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
     });
   }
 
@@ -108,8 +111,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (navDots.length > 0 && sections.length > 0) {
     const sectionObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
+        const id = entry.target.getAttribute('id');
         if (entry.isIntersecting) {
-          const id = entry.target.getAttribute('id');
           navDots.forEach((dot) => {
             // Match dot to section via href or data-target attribute
             const dotTarget = dot.getAttribute('data-target') ||
@@ -121,6 +124,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
           });
         }
+
+          // Update TOC active state
+          const tocLink = document.querySelector(`.toc-list a[href="#${id}"]`);
+          if (tocLink) {
+            if (entry.isIntersecting) {
+              tocLink.classList.add('toc-active');
+            } else {
+              tocLink.classList.remove('toc-active');
+            }
+          }
       });
     }, {
       threshold: 0.3
@@ -138,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!targetId) return;
       const targetEl = document.querySelector(targetId);
       if (targetEl) {
-        targetEl.scrollIntoView({ behavior: 'smooth' });
+        targetEl.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth' });
       }
     });
   });
@@ -263,7 +276,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const target = document.querySelector(href);
       if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
+        target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth' });
       }
     });
   });
@@ -318,7 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth' });
+        target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth' });
       }
     });
   });
