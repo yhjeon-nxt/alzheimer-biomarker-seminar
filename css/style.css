@@ -162,7 +162,7 @@ a:hover {
 .page {
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 0 2.5rem 8rem;
+  padding: 0 2.5rem 4rem;
 }
 
 /* ----------------------------------------------------------
@@ -494,7 +494,7 @@ a:hover {
    7. Sections
    ---------------------------------------------------------- */
 .section {
-  padding: 3rem 0;
+  padding: 2rem 0;
   border-bottom: 1px solid var(--border-light);
 }
 
@@ -1087,7 +1087,7 @@ h3 {
    ---------------------------------------------------------- */
 .figure {
   text-align: center;
-  margin: 1.5rem 0;
+  margin: 1rem 0;
 }
 
 .figure-frame {
@@ -1684,7 +1684,7 @@ pre {
 
   /* Section padding */
   .section {
-    padding: 2rem 0;
+    padding: 1.5rem 0;
   }
 
   .section-title {
@@ -1727,7 +1727,7 @@ pre {
 
   /* Page padding */
   .page {
-    padding: 0 1rem 6rem;
+    padding: 0 1rem 3rem;
   }
 
   /* Step flow — vertical */
@@ -1803,8 +1803,8 @@ pre {
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 1.5rem 1.8rem;
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
   box-shadow: var(--shadow-sm);
 }
 
